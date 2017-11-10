@@ -69,7 +69,13 @@
 
 There are a few aims for the coding exercise.  We want to know that the candidate has competency with the relevant language(s) but we also want to see how they work through a problem to find a solution. Please encourage the candidate to ask questions or make comments along the way. 
 
-Inform them of the 10 minute window to complete the exercise and that we want to leave plenty of time for the following conversation. Sometimes candidates can take quite a while. Be mindful of the time and if need be politely stop the exercise. Letting them know again that we want to make sure we have enough time to talk.
+
+
+On the`interview.catatalpa.buid` ,have the candidate login and attach to a preexisting tmux session.  Once we can all see the same terminal window, direct the candidates attention to the pre-existing file `exercise.py`.  In that file there should be a stub of a function and a written description of the exercise. 
+
+
+
+Walk the candidate through the exercise and answer any question they may have. Inform them of the 10 minute window to complete the exercise and that we want to leave plenty of time for the following conversation. Sometimes candidates can take quite a while. Be mindful of the time and if need be politely stop the exercise. Letting them know again that we want to make sure we have enough time to talk.
 
 
 
@@ -78,6 +84,10 @@ Inform them of the 10 minute window to complete the exercise and that we want to
 ```
 
 
+
+### Comments on the exercise
+
+- [comment on the process and the result of the exercise here]
 
 
 
