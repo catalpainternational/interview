@@ -114,12 +114,9 @@ Work the ideas behind the questions below into the conversation — they don't h
 #### Code stack
 
 - What is your Python experience? Django?
-
 - What is your JavaScript experience? Frameworks?
-
 - What is your experiece with SQL? Have you used any Postgres Specific Features?
 
-  ​
 
 
 ### Questions from the Candidate
@@ -133,8 +130,6 @@ Once we are finished with our questions, ask the candidate if they have any ques
 ## Notes:
 
 - [Write answers to the questions and other observations here]
-
-  ​
 
 
 
@@ -175,5 +170,5 @@ Immediately after the interview is finished have a bit of a debrief with the int
 
 - [ ] Clean up and finalize the notes of this interview
 - [ ] Add the Interview notes to Workable
-- [ ] Save these notes to Dropbox
+- [ ] Save these notes to Dropbox in the proper folder under Human Resources / Recruitment
 - [ ] Post a link to these notes in the Slack #recruitment channel
