@@ -16,15 +16,20 @@
 
   <body>
     <header>Type a message</header>
-    <textarea id="text" name='text' onkeypress="input_text()"/></textarea>
-    <div>Count character:</div><span id="counter"></span>
-
+      <div>
+        <textarea rows="10" cols="60" id="text" onkeypress="kontaKarakter()"></textarea>
+        <p>
+          Konta karakter: <span id="counter"></span>
+        </p>
+        Karakter labele liu husi 160
+    </div>
+    
     <script>
-        function input_text() {
-            document.getElementById('counter').innerHTML = document.getElementById('text').value.length;
-        }
+      function kontaKarakter() {
+        document.getElementById('counter').innerHTML = document.getElementById('text').value.length;
+      }
     </script>
-
+  
   </body>
 </html>
 
