@@ -11,7 +11,6 @@
       body {
         background-color: lightgrey;
       }
-
       #theme-preview {
           display: inline;
       }
@@ -31,4 +30,16 @@
   </head>
 
   <body>
-    <header>Select a Theme</header>
+    <header>Type a message</header>
+    <textarea id="text" name='text' onkeypress="input_text()"/></textarea>
+    <div>Count character:</div><span id="counter"></span>
+
+    <script>
+        function input_text() {
+            document.getElementById('counter').innerHTML = document.getElementById('text').value.length;
+        }
+    </script>
+
+  </body>
+</html>
+
