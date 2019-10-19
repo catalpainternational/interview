@@ -11,10 +11,15 @@
       body {
         background-color: lightgrey;
       }
+      progress {
+          display: block;
+      }
+
     </style>
   </head>
 
   <body>
+          
     <header>Type a message</header>
       <div>
         <textarea rows="10" cols="60" id="text" onkeypress="kontaKarakter()"></textarea>
@@ -22,6 +27,8 @@
           Konta karakter: <span id="counter"></span>
         </p>
         Karakter labele liu husi 160
+
+        <progress max="100" value="70"> 70% </progress>
     </div>
     
     <script>
@@ -29,7 +36,5 @@
         document.getElementById('counter').innerHTML = document.getElementById('text').value.length;
       }
     </script>
-  
   </body>
 </html>
-
