@@ -11,26 +11,25 @@
       body {
         background-color: lightgrey;
       }
-
     </style>
   </head>
 
   <body>
     <header>Type a message</header>
-
-    <div>
-        <textarea rows="10" cols="60"></textarea>
+      <div>
+        <textarea rows="10" cols="60" id="text" onkeypress="kontaKarakter()"></textarea>
         <p>
-        Konta karakter: 
-        <p>
-       Karakter labele liu husi 160
+          Konta karakter: <span id="counter"></span>
+        </p>
+        Karakter labele liu husi 160
     </div>
-
+    
     <script>
-        function kontaKarakter() {
-        }
+      function kontaKarakter() {
+        document.getElementById('counter').innerHTML = document.getElementById('text').value.length;
+      }
     </script>
-
-
+  
   </body>
 </html>
+
