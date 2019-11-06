@@ -26,33 +26,7 @@
         fill:Black;
         stroke:Black;
       }
-    </style>
-    
-    <script>
-      const colors = [
-        ['blue-1', '#04788E'],
-        ['blue-2', '#00B8AD'],
-        ['brown', '#744D4D'],
-        ['gray-1', '#2A3942'],
-        ['gray-2', '#3F525E'],
-        ['gray-3', '#596973'],
-        ['green-1', '#007B56'],
-        ['green-2', '#10B584'],
-        ['orange-1', '#F66400'],
-        ['orange-2', '#F67C36'],
-        ['pink-1', '#8A0079'],
-        ['pink-2', '#C300AB'],
-        ['purple', '#6F6CAC'],
-        ['red-1', '#DE3011'],
-        ['red-2', '#FF694D'],
-      ];
-      const icons = [
-        ['Digital', 'icon-digital'],
-        ['Financial', 'icon-financial'],
-        ['Leadership', 'icon-leadership'],
-      ];
-    </script>
-    
+    </style> 
   </head>
 
   <body>
@@ -90,6 +64,76 @@
         </li>
       </ol>
     </section>
+
+    <script>
+      const colors = [
+        ['black', '#000000'],
+        ['blue-1', '#04788E'],
+        ['blue-2', '#00B8AD'],
+        ['brown', '#744D4D'],
+        ['gray-1', '#2A3942'],
+        ['gray-2', '#3F525E'],
+        ['gray-3', '#596973'],
+        ['green-1', '#007B56'],
+        ['green-2', '#10B584'],
+        ['orange-1', '#F66400'],
+        ['orange-2', '#F67C36'],
+        ['pink-1', '#8A0079'],
+        ['pink-2', '#C300AB'],
+        ['purple', '#6F6CAC'],
+        ['red-1', '#DE3011'],
+        ['red-2', '#FF694D'],
+      ];
+      const icons = [
+        ['Digital', 'icon-digital'],
+        ['Financial', 'icon-financial'],
+        ['Leadership', 'icon-leadership'],
+      ];
+
+      const colourDropdownEl = document.getElementById("choose-colour");
+      const iconDropdownEl = document.getElementById("choose-icon");
+      const iconEls = document.querySelectorAll('#theme-display svg');
+
+      function normalizeColourName(name) {
+        name = name.split('-').join(' ');
+        return name[0].toUpperCase() +  name.slice(1);
+      }
+
+      function addItemsToDropdown(dropdownEl, items, normalizeNameFn = (_) => _) {
+        dropdownEl.innerHTML = "";
+        items.forEach(item => {
+          const option = document.createElement("option");
+          option.value = item[1];
+          option.text = normalizeNameFn(item[0]);
+          dropdownEl.appendChild(option);
+        })
+      }
+
+      function render() {
+        const colour = colourDropdownEl.value;
+        const icon = iconDropdownEl.value;
+        const currentIconEl = document.getElementById(icon);
+        
+        iconEls.forEach(e => e.style.display = "none");
+        currentIconEl.style.display = "inline";
+
+        const pathEls = document.querySelectorAll(`#${icon} path`)
+        pathEls.forEach(e => {
+          e.style.stroke = colour; 
+          e.style.fill = colour; 
+        });
+      }
+      
+      document.addEventListener('input', function (event) {
+        if (event.target.id === 'choose-colour' ||
+            event.target.id === 'choose-icon') render();
+      });
+
+      addItemsToDropdown(colourDropdownEl, colors, normalizeColourName);
+      addItemsToDropdown(iconDropdownEl, icons);
+      render();
+
+    </script>
 
   </body>
 
